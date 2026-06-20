@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Little Game For You</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="assets/blue_yungkai.mp3" type="audio/mp3">
+</audio>
+
+<!-- START SCREEN -->
+<div id="startScreen" class="start-screen">
+
+    <div class="start-content">
+
+        <h1>Hai Alynne </h1>
+
+          <p>
+            Aku punya permainan kecil buat kamu 🙂
+          </p>
+
+          <button onclick="startGame()" class="start-btn">
+            Klik Aku 🤍
+        </button>
+
+    </div>
+
+</div>  
+
+  <!-- Background -->
+  <div class="overlay"></div>
+  <div class="stars"></div>
+
+  <!-- GAME CONTAINER -->
+<div class="game-container" id="gameBox" style="display:none;">
+
+  <h1>Special Game for You</h1>
+  <p>Balik 2 Kartu yang Sama!</p>
+
+  <div class="grid">
+
+    <div class="card" data-emoji="🦄">🦄</div>
+    <div class="card" data-emoji="🌈">🌈</div>
+    <div class="card" data-emoji="🦄">🦄</div>
+    <div class="card" data-emoji="✨">✨</div>
+
+    <div class="card" data-emoji="✨">✨</div>
+    <div class="card" data-emoji="🍭">🍭</div>
+    <div class="card" data-emoji="🌈">🌈</div>
+    <div class="card" data-emoji="🤍">🤍</div>
+
+    <div class="card" data-emoji="🤍">🤍</div>
+    <div class="card" data-emoji="🌷">🌷</div>
+    <div class="card" data-emoji="🍭">🍭</div>
+    <div class="card" data-emoji="🌷">🌷</div>
+
+  </div>
+
+</div>
+
+<!-- GIFT BOX -->
+<div class="gift-container hidden" id="giftBox">
+
+  <div class="gift" onclick="openGift()">
+    🎁
+  </div>
+
+  <p class="gift-text">
+    Klik kadonya 🤍 <br>  
+    Ada sedikit semangat untukmu
+  </p>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+<div class="message-box hidden" id="messageBox">
+
+  <img src="assets/unicorn4.png" class="couple">
+
+  <div class="message hidden" id="messageContent">
+
+Haii Rahmadania Arrum Pratisa
+
+<br><br>
+
+Semangat yaa besok seleksinya 😊
+
+<br><br>
+
+Kamu sudah berusaha dan berjuang sejauh ini
+Jadi jangan ragu pada kemampuanmu sendiri
+
+<br><br>
+
+Tetap percaya diri dan lakukan yang terbaik saat seleksi nanti ✨ 
+
+<br><br>
+
+Apapun hasilnya nanti, kamu tetap orang yang hebat karena sudah berani berjuang sampai sejauh ini
+
+<br><br>
+
+Jaga kesehatan, istirahat yang cukup, dan tetap semangat yaa 🤍
+
+<br><br>
+
+Aku yakin kamu pasti bisa 😊🤍
+Aku kirim ini cuma buat kamu, semoga tetap semangat dan percaya diri ✨
+
+  </div>
+
+  <div class="message" id="typingText"></div>
+
+</div>
+
+<!-- TOMBOL LANJUT -->
+<div id="flowerButtonContainer" class="hidden">
+
+    <button
+        id="flowerBtn"
+        class="start-btn"
+        onclick="showFlower()">
+
+        Buat kamu🌷
+
+    </button>
+
+</div>
+
+<!-- FLOWER PAGE -->
+<div id="flowerBox" class="hidden">
+
+    <iframe
+        src="flower/index.html"
+        width="100%"
+        height="100%"
+        frameborder="0">
+    </iframe>
+
+</div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
